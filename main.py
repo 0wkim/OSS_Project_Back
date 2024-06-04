@@ -26,7 +26,7 @@ guestbook_entries = []
 class GuestbookEntry(BaseModel):
     name: str
     message: str
-    timestamp: str
+    timestamp: datetime
 
 # 방명록 데이터 반환
 @router.get('/guestbook', response_model=List[GuestbookEntry])
